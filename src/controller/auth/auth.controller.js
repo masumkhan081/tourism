@@ -1,6 +1,6 @@
-const authService = require("../cervices/auth.service");
+const authService = require("../../cervices/auth.service");
 const httpStatus = require("http-status");
-const config = require("../config");
+const config = require("../../config");
 const userModel = require("../models/user.model");
 
 async function createUser(req, res) {

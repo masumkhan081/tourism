@@ -1,7 +1,7 @@
-const User = require("../models/user.model");
+const User = require("../../models/auth/accessLevel.model");
 /* eslint-disable no-unused-vars */
-const { getSearchAndPagination } = require("../utils/pagination");
-const config = require("../config/index");
+const { getSearchAndPagination } = require("../../utils/pagination");
+const config = require("../../config/index");
 const {
   success_msg,
   getErrorResponse,
@@ -9,8 +9,8 @@ const {
   getCreateResponse,
   getDeletionResponse,
   getUpdateResponse,
-} = require("../utils/responseHandler");
-const { operableEntities } = require("../config/constants");
+} = require("../../utils/responseHandler");
+const { operableEntities } = require("../../config/constants");
 const bcrypt = require("bcrypt");
 
 async function createUser(data) {

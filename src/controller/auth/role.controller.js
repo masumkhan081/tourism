@@ -1,4 +1,4 @@
-const userService = require("../cervices/user.service");
+const userService = require("../../cervices/auth/user.service");
 const httpStatus = require("http-status");
 
 async function createUser(req, res) {

@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 const userModel = require("../models/user.model");
 const bcrypt = require("bcrypt");
-const mailService = require("../utils/mail");
-const config = require("../config");
+const mailService = require("../../utils/mail");
+const config = require("../../config");
 const httpStatus = require("http-status");
 /* eslint-disable no-unused-vars */
-const { getSearchAndPagination } = require("../utils/pagination");
+const { getSearchAndPagination } = require("../../utils/pagination");
 const {
   success_msg,
   getErrorResponse,
@@ -13,8 +13,8 @@ const {
   getCreateResponse,
   getDeletionResponse,
   getUpdateResponse,
-} = require("../utils/responseHandler");
-const { operableEntities } = require("../config/constants");
+} = require("../../utils/responseHandler");
+const { operableEntities } = require("../../config/constants");
 
 const jwt = require("jsonwebtoken");
 

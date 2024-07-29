@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
 const { Schema, model } = require("mongoose");
 
-const acessMapSchema = new Schema(
+const acessLevelSchema = new Schema(
   {
-    entity: {
+    name: {
       type: String,
       required: true,
     },
-    functions: [String],
   },
   {
     timestamps: true,
@@ -16,6 +15,6 @@ const acessMapSchema = new Schema(
   }
 );
 
-const AccessMap = model("accessMap", acessMapSchema);
+const accessLevel = model("accessLevel", acessLevelSchema);
 
-module.exports = AccessMap;
+module.exports = accessLevel;

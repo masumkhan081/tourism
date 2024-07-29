@@ -1,7 +1,15 @@
 /* eslint-disable no-unused-vars */
 const { Router } = require("express");
-// all the routes involved in this project
-const userRoutes = require("./user.route");
+
+//  auth routes
+const userRoutes = require("./auth/user.route");
+const authRoutes = require("./auth/auth.route");
+const roleRoutes = require("./auth/role.route");
+const accessMapRoutes = require("./auth/accessMap.route");
+const accessLevelRoutes = require("./auth/accessLevel.route");
+
+// 
+
 const addressRoutes = require("./address.route");
 const showroomRoutes = require("./showroom.route");
 const productCategoryRoutes = require("./productCategory.route");
@@ -19,7 +27,6 @@ const employeeRoutes = require("./employee.route");
 const salaryRoutes = require("./salary.route");
 const expenseCategoryRoutes = require("./expenseCategory.route");
 const expenseRoutes = require("./expense.route");
-const authRoutes = require("./auth.route");
 const fileRoutes = require("./file.route");
 
 const router = Router();
@@ -32,6 +39,18 @@ const routes = [
   {
     path: "/users",
     route: userRoutes,
+  },
+  {
+    path: "/roles",
+    route: roleRoutes,
+  },
+  {
+    path: "/access-map",
+    route: accessMapRoutes,
+  },
+  {
+    path: "/access-level",
+    route: accessLevelRoutes,
   },
   {
     path: "/showrooms",

@@ -11,6 +11,11 @@ const roleSchema = new Schema(
       type: String,
       required: true,
     },
+    accesses: {
+      type: Schema.Types.ObjectId,
+      ref: "accesses",
+      required: true,
+    },
   },
   {
     timestamps: true,

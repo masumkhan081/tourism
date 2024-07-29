@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const authController = require("../controller/auth.controller.js");
+const authController = require("../../controller/auth/auth.controller.js");
 
 // when super-admin creates user account for a salesman
 router.post("/", authController.createUser);
